@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f9f2ed;
+  font-family: "Roboto", sans-serif;
+  color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
