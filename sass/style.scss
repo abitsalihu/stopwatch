@@ -1,0 +1,30 @@
+//! STARTING CODDE
+
+$default: #f9f2ed;
+$stop: #f87474;
+$resume: #3ab0ff;
+$black: #323232;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: $default;
+  font-family: "Roboto", sans-serif;
+  color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
