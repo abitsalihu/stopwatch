@@ -30,7 +30,7 @@ body {
     font-size: 5rem;
     font-weight: 300; }
   .stopwatch__btns {
-    width: 400px;
+    width: 300px;
     display: flex;
     justify-content: space-around; }
     .stopwatch__btns-b {
