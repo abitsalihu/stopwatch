@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>StopWatch</title>
   </head>
-  <body class="">
+  <body>
     <div class="stopwatch">
       <div class="stopwatch__time">
         <h1 class="stopwatch__time-show">
@@ -26,9 +26,15 @@
       <div class="stopwatch__btns">
         <button class="stopwatch__btns-b stopwatch__btns-reset">Reset</button>
         <button class="stopwatch__btns-b stopwatch__btns-start">Start</button>
-        <button class="stopwatch__btns-b stopwatch__btns-stop">Stop</button>
-        <button class="stopwatch__btns-b stopwatch__btns-resume">Resume</button>
+        <button class="stopwatch__btns-b stopwatch__btns-stop hidden">
+          Stop
+        </button>
+        <button class="stopwatch__btns-b stopwatch__btns-resume hidden">
+          Resume
+        </button>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

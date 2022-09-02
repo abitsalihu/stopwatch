@@ -21,7 +21,7 @@ html {
 body {
   min-width: 100vw;
   min-height: 100vh;
-  //   border: 1px solid blue;
+
   background-color: $default;
   font-family: "Roboto", sans-serif;
   color: $black;
@@ -33,7 +33,6 @@ body {
 .stopwatch {
   width: 80%;
   height: 25rem;
-  //   border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,7 +46,6 @@ body {
   }
 
   &__btns {
-    // border: 1px solid red;
     width: 400px;
     display: flex;
     justify-content: space-around;
@@ -64,20 +62,13 @@ body {
       box-shadow: 19px 19px 32px #d0d0d0, -19px -19px 32px #ffffff;
     }
 
-    &-reset {
-    }
-    &-start {
-      //   display: none;
-    }
     &-stop {
-      display: none;
       background-color: $default;
       color: $stop;
       box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px,
         rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
     }
     &-resume {
-      display: none;
       background-color: $default;
       color: $resume;
       box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px,
@@ -88,16 +79,16 @@ body {
 
 //? COLOR CHANGES AFTER BTN PRESSED
 
-.active {
+.resume-active {
   background-color: $resume;
   color: $default;
-  transition: all 0.2s ease;
+  transition: all 0.35s ease;
 }
 
 .stop-active {
   background: $stop;
   color: white;
-  transition: all 0.2s ease;
+  transition: all 0.35s ease;
 }
 
 .reset-new {
@@ -105,4 +96,11 @@ body {
   color: $default;
   box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.active {
+  display: inline-block;
+}
+.hidden {
+  display: none;
 }
