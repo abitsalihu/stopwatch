@@ -1,0 +1,22 @@
+{
+  "name": "stopwatch",
+  "version": "1.0.0",
+  "description": "stopwatch code",
+  "main": "script.js",
+  "scripts": {
+    "compile-sass": "node-sass sass/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abitsalihu/stopwatch.git"
+  },
+  "author": "abi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abitsalihu/stopwatch/issues"
+  },
+  "homepage": "https://github.com/abitsalihu/stopwatch#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
