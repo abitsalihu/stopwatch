@@ -9,15 +9,20 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
-
     />
-    <link href='https://css.gg/dark-mode.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>StopWatch</title>
   </head>
   <body>
-    <button class="btn-toggle"><i class="gg-dark-mode"></i></button>
+    <div class="container">
     <div class="stopwatch">
+      <div class="toggle">
+        <i class="far fa-sun"></i>
+        </div>
       <div class="stopwatch__time">
         <h1 class="stopwatch__time-show">
           <span class="minutes">00</span>:<span class="seconds">00</span>.<span
@@ -38,9 +43,11 @@
       </div>
     </div>
     
+    
     <div class="copyright">
       Created by: <span class="name">Abit Salihu</span>
     </div>
+  </div>
 
     <script src="script.js"></script>
   </body>
