@@ -10,6 +10,8 @@ const resume = document.querySelector(".stopwatch__btns-resume");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const milliseconds = document.querySelector(".milliseconds");
+const container = document.querySelector(".container");
+const toggle = document.querySelector(".toggle");
 
 //? STARTING CONDITIONS FOR THE TIMEOUT
 let timerMilliseconds = 0;
@@ -92,4 +94,11 @@ allBtns.addEventListener("click", function (e) {
     display(stop, "active", "hidden");
     timer();
   }
+});
+
+
+toggle.addEventListener("click", () => {
+  container.classList.toggle("dark")
+    ? (toggle.firstElementChild.className = "far fa-moon")
+    : (toggle.firstElementChild.className = "far fa-sun");
 });
