@@ -80,3 +80,10 @@ body {
 .name {
   font-weight: 500;
   font-size: 1.2rem; }
+
+  .btn-toggle{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+  }
