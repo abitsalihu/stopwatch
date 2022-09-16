@@ -63,6 +63,7 @@ allBtns.addEventListener("click", function (e) {
     checkdark = false;
     console.log(1);
     body.classList.add("resume-active");
+    document.getElementById("toggle").style.pointerEvents = "none";
     if (body.classList.contains("dark")){
       checkdark = true;
       body.classList.remove("dark");
@@ -89,6 +90,7 @@ allBtns.addEventListener("click", function (e) {
     body.classList.add("dark")
     checkdark = false;
     }
+    document.getElementById("toggle").style.pointerEvents = "auto";
     timerMilliseconds = 0;
     timerSeconds = 0;
     timerMinutes = 0;
@@ -96,17 +98,17 @@ allBtns.addEventListener("click", function (e) {
     seconds.textContent = "00";
     milliseconds.textContent = "00";
   } else if (e.target.classList.contains("stopwatch__btns-stop")) {
-    body.classList.remove("resume-active");
-    body.classList.add("stop-active");
-    display(stop, "hidden", "active");
-    display(resume, "active", "hidden");
-    stopTimer();
+      body.classList.remove("resume-active");
+      body.classList.add("stop-active");
+      display(stop, "hidden", "active");
+      display(resume, "active", "hidden");
+      stopTimer();
   } else if (e.target.classList.contains("stopwatch__btns-resume")) {
-    body.classList.remove("stop-active");
-    body.classList.add("resume-active");
-    display(resume, "hidden", "active");
-    display(stop, "active", "hidden");
-    timer();
+      body.classList.remove("stop-active");
+      body.classList.add("resume-active");
+      display(resume, "hidden", "active");
+      display(stop, "active", "hidden");
+      timer();
   }
 });
 
