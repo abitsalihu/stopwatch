@@ -34,7 +34,7 @@ body {
       padding: 10px 30px;
       border-radius: 25px;
       font-weight: 600;
-      box-shadow: 19px 19px 32px #0e0d0d, -19px -19px 32px #1b1b1b; }
+      box-shadow: 19px 19px 32px #262626, -19px -19px 32px #1b1b1b; }
     body.dark .copyright {
       color: #ffffff; }
     body.dark .stopwatch__btns-stop {
@@ -102,15 +102,18 @@ body {
 
 .copyright {
   position: absolute;
-  bottom: 20px; }
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
 
 .name {
   font-weight: 500;
   font-size: 1.2rem; }
 
 .toggle {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   background-color: #ffffff;
   position: absolute;
   top: 2rem;
@@ -118,7 +121,22 @@ body {
   display: grid;
   place-items: center;
   border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  background: none !important; }
+  .toggle__icon {
+    width: 100%;
+    height: 100%; }
+
+.git {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   cursor: pointer; }
-  .toggle i {
-    font-size: 4rem;
-    color: #777; }
+
+.git-abit {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: 2.5px; }

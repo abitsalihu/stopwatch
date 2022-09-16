@@ -1,6 +1,5 @@
 "use strict";
 
-
 const body = document.querySelector("body");
 const timeShow = document.querySelector(".stopwatch__time-show");
 const allBtns = document.querySelector(".stopwatch__btns");
@@ -12,6 +11,9 @@ const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const milliseconds = document.querySelector(".milliseconds");
 const toggle = document.querySelector(".toggle");
+const icon = document.querySelector(".toggle__icon");
+const gitIconSrc = document.querySelector(".git-icon");
+const allGitIcon = document.querySelectorAll(".git-icon");
 
 //? STARTING CONDITIONS FOR THE TIMEOUT
 let checkdark = false;
@@ -64,31 +66,29 @@ allBtns.addEventListener("click", function (e) {
     console.log(1);
     body.classList.add("resume-active");
     document.getElementById("toggle").style.pointerEvents = "none";
-    if (body.classList.contains("dark")){
+    if (body.classList.contains("dark")) {
       checkdark = true;
       body.classList.remove("dark");
-
     }
     reset.classList.add("reset-new");
     e.target.classList.add("hidden");
     display(stop, "active", "hidden");
     timer();
-  } 
-  else if (e.target.classList.contains("stopwatch__btns-reset")) {
+  } else if (e.target.classList.contains("stopwatch__btns-reset")) {
     console.log(2);
     body.classList.remove("resume-active");
-    
+
     body.classList.remove("stop-active");
     reset.classList.remove("reset-new");
-    
+
     display(stop, "hidden", "active");
     display(start, "active", "hidden");
     display(resume, "hidden", "active");
-    
+
     stopTimer();
-    if(checkdark){
-    body.classList.add("dark")
-    checkdark = false;
+    if (checkdark) {
+      body.classList.add("dark");
+      checkdark = false;
     }
     document.getElementById("toggle").style.pointerEvents = "auto";
     timerMilliseconds = 0;
@@ -98,23 +98,31 @@ allBtns.addEventListener("click", function (e) {
     seconds.textContent = "00";
     milliseconds.textContent = "00";
   } else if (e.target.classList.contains("stopwatch__btns-stop")) {
-      body.classList.remove("resume-active");
-      body.classList.add("stop-active");
-      display(stop, "hidden", "active");
-      display(resume, "active", "hidden");
-      stopTimer();
+    body.classList.remove("resume-active");
+    body.classList.add("stop-active");
+    display(stop, "hidden", "active");
+    display(resume, "active", "hidden");
+    stopTimer();
   } else if (e.target.classList.contains("stopwatch__btns-resume")) {
-      body.classList.remove("stop-active");
-      body.classList.add("resume-active");
-      display(resume, "hidden", "active");
-      display(stop, "active", "hidden");
-      timer();
+    body.classList.remove("stop-active");
+    body.classList.add("resume-active");
+    display(resume, "hidden", "active");
+    display(stop, "active", "hidden");
+    timer();
   }
 });
 
-
 toggle.addEventListener("click", () => {
-  body.classList.toggle("dark")
-    ? (toggle.firstElementChild.className = "far fa-moon")
-    : (toggle.firstElementChild.className = "far fa-sun");
+  body.classList.toggle("dark");
+  const currentIcon = icon.src;
+  const nexticon = icon.getAttribute("data-set");
+  const currentGitIcon = gitIconSrc.src;
+  const nextGitIcon = gitIconSrc.getAttribute("data-set");
+  allGitIcon.forEach(function (e) {
+    e.src = nextGitIcon;
+    e.setAttribute("data-set", currentGitIcon);
+  });
+  console.log(nextGitIcon);
+  icon.src = nexticon;
+  icon.setAttribute("data-set", currentIcon);
 });

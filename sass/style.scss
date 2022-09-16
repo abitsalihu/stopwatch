@@ -6,7 +6,6 @@ $resume: #3ab0ff;
 $black: #323232;
 $gray: #777;
 
-
 *,
 *::before,
 *::after {
@@ -52,28 +51,27 @@ body {
       padding: 10px 30px;
       border-radius: 25px;
       font-weight: 600;
-      box-shadow: 19px 19px 32px #0e0d0d, -19px -19px 32px #1b1b1b; }
+      box-shadow: 19px 19px 32px #262626, -19px -19px 32px #1b1b1b;
+    }
 
-      .copyright {
-        color: $default;
-      }
+    .copyright {
+      color: $default;
+    }
 
+    .stopwatch__btns-stop {
+      background-color: $default;
+      color: $stop;
+      box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+    }
 
-      .stopwatch__btns-stop {
-        background-color: $default;
-        color: $stop;
-        box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px; }
-
-        .stopwatch__btns-resume {
-          background-color: $default;
-          color: $resume;
-          box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px; } 
-    
-
-
+    .stopwatch__btns-resume {
+      background-color: $default;
+      color: $resume;
+      box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.5) 0px 1px 3px -1px;
+    }
   }
-
-
 }
 
 .stopwatch {
@@ -154,39 +152,46 @@ body {
 .copyright {
   position: absolute;
   bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .name {
   font-weight: 500;
   font-size: 1.2rem;
   // text-transform: uppercase;
 }
- .toggle {
-    width: 6rem;
-    height: 6rem;
-    background-color: $default;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    cursor: pointer;
+.toggle {
+  width: 4rem;
+  height: 4rem;
+  background-color: $default;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  background: none !important;
 
-    i {
-      font-size: 4rem;
-      color: $gray;
-    }
-  } 
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
 
-  
- 
-  
-  
- 
-  
+.git {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
 
-    
-    
-    
-
-      
+.git-abit {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-left: 2.5px;
+}
