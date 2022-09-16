@@ -18,6 +18,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  body.dark {
+    background-color: #262626;
+    color: #ffffff; }
+    body.dark .toggle {
+      background-color: #323232; }
+      body.dark .toggle i {
+        color: #ffffff; }
+    body.dark .stopwatch__btns-b {
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 1.75rem;
+      background-color: #323232;
+      padding: 10px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 19px 19px 32px #0e0d0d, -19px -19px 32px #1b1b1b; }
+    body.dark .copyright {
+      color: #ffffff; }
+    body.dark .stopwatch__btns-stop {
+      background-color: #ffffff;
+      color: #ff4a4a;
+      box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px; }
+    body.dark .stopwatch__btns-resume {
+      background-color: #ffffff;
+      color: #3ab0ff;
+      box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px, rgba(0, 0, 0, 0.5) 0px 1px 3px -1px; }
 
 .stopwatch {
   width: 80%;
@@ -80,3 +107,18 @@ body {
 .name {
   font-weight: 500;
   font-size: 1.2rem; }
+
+.toggle {
+  width: 6rem;
+  height: 6rem;
+  background-color: #ffffff;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer; }
+  .toggle i {
+    font-size: 4rem;
+    color: #777; }
